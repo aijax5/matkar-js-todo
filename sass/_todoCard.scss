@@ -1,0 +1,156 @@
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-cards {
+  margin-top: 3rem;
+  align-self: center;
+   &--heading{
+    font-family: 'Quicksand' !important;
+    align-self: flex-start;
+    font-size: 2.4rem !important;
+    margin-bottom: 2rem;
+  }
+}
+.todo-cards {
+  h2{
+    font-size: 2rem;
+  }
+  .todocard:not( :last-child ){
+    margin-bottom: 2rem;
+  }
+}
+.todocard {
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgba(#e94822, 0.9);
+  width: 43%;
+  // height: 15rem; 
+  align-self: center;
+  font-size: 1.4rem;
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0 10px 6px -6px rgba($col-dark, 0.4);
+
+  label {
+    margin-right: 2rem;
+  }
+
+  &--title {
+    font-weight: 700;
+  }
+
+  &--desc {
+    width: 100%;
+    font-weight: 200;
+  }
+  .checkbox {
+    margin: 5px 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    border-radius: 2px;
+    width: 25px;
+    background-color: #94311b
+  }
+
+  :hover input~.checkmark {
+    background-color: #f5a53d;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  input:checked~.checkmark {
+    background-color: $col-dark;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  input:checked~.checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid $color-primary;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.finished-cards{
+  .finished-card{
+    background-color: rgba($col-dark,0.9);
+    color: #e94822;
+    text-decoration: line-through;
+    text-decoration-color: $color-primary;
+  }
+  .checkmark {
+    background-color: #000000;
+  }
+
+  :hover input~.checkmark {
+    background-color: #584d3e;
+  }
+
+  input:checked~.checkmark {
+    background-color: #584d3e;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .todo-cards {
+    .todocard:not( :last-child ){
+      margin-top: 9rem;
+    }
+  }
+
+  .col-md-6 {
+    padding: 0 !important;
+  }
+
+  .todocard {
+    width: 99%;
+    font-size: 1.6rem;
+
+    .checkbox {
+      margin: 1px 0;
+    }
+
+    .checkmark {
+      height: 20px;
+      width: 20px;
+    }
+
+    label {
+      margin-right: 2rem;
+    }
+
+    &--title {
+      font-size: 2.2rem;
+    }
+
+    &--desc {
+      font-size: 1.8rem;
+    }
+  }
+
+}

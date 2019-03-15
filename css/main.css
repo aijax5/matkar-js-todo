@@ -1,0 +1,402 @@
+.container-fluid .btn-round {
+  border-radius: 50rem;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  -webkit-transform: translateX(-8%);
+          transform: translateX(-8%);
+}
+
+.container-fluid .btn-round span {
+  font-size: 90%;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-fluid .add {
+  background-color: #2c2d34;
+  color: #efd510;
+  font-size: 1.6rem;
+}
+
+.container-fluid .add:hover {
+  color: #f2910a;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.container-fluid .add:focus {
+  color: #efd510;
+}
+
+.container-fluid .add::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.heading {
+  position: relative;
+  left: 5%;
+}
+
+.heading--text {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: #2c2d34;
+  font-weight: 700;
+}
+
+.addTodo {
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translatex(-50%);
+          transform: translatex(-50%);
+}
+
+.addTodo h3 {
+  text-transform: uppercase;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 5%;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.addTodo > div {
+  width: 90%;
+}
+
+.addTodo input,
+.addTodo textarea {
+  border: none;
+  background-color: #f2910a;
+  padding: 1rem 2rem;
+  width: 80%;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  -webkit-transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.addTodo input::-webkit-input-placeholder,
+.addTodo textarea::-webkit-input-placeholder {
+  color: #fae7cc;
+}
+
+.addTodo input:-ms-input-placeholder,
+.addTodo textarea:-ms-input-placeholder {
+  color: #fae7cc;
+}
+
+.addTodo input::-ms-input-placeholder,
+.addTodo textarea::-ms-input-placeholder {
+  color: #fae7cc;
+}
+
+.addTodo input::placeholder,
+.addTodo textarea::placeholder {
+  color: #fae7cc;
+}
+
+.addTodo input:focus,
+.addTodo textarea:focus {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.addTodo--title {
+  margin-bottom: 2rem;
+}
+
+.addTodo--title .btn {
+  margin-left: 5rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.addTodo--desc {
+  display: none;
+}
+
+.addTodo--desc textarea {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.addTodo--desc button {
+  margin-top: 8%;
+}
+
+.addTodo--desc .btn-cont button:first-child {
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 480px) {
+  .col-xs-12 {
+    padding: 0 !important;
+  }
+  .heading {
+    left: 0%;
+  }
+  .addTodo {
+    margin-top: 10%;
+  }
+  .addTodo h3 {
+    font-size: 2rem;
+    margin-left: 2%;
+  }
+  .addTodo > div {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .addTodo .btn {
+    margin: 0;
+    margin-top: 4rem;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+  }
+  .addTodo input,
+  .addTodo textarea {
+    border-radius: 1rem;
+    width: 100%;
+    font-size: 2.6rem;
+  }
+}
+
+html body {
+  font-size: 62.5%;
+  font-family: 'Quicksand', sans-serif;
+  color: #2c2d34;
+}
+
+.container-fluid {
+  min-height: 95vh;
+  background-color: #efd510;
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 38% !important;
+  }
+}
+
+.container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.todo-cards {
+  margin-top: 3rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.todo-cards--heading {
+  font-family: 'Quicksand' !important;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 2.4rem !important;
+  margin-bottom: 2rem;
+}
+
+.todo-cards h2 {
+  font-size: 2rem;
+}
+
+.todo-cards .todocard:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.todocard {
+  font-family: 'Roboto Mono', monospace;
+  background-color: rgba(233, 72, 34, 0.9);
+  width: 43%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.4rem;
+  padding: .8rem 1rem;
+  border-radius: 1rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: 0 10px 6px -6px rgba(44, 45, 52, 0.4);
+          box-shadow: 0 10px 6px -6px rgba(44, 45, 52, 0.4);
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.todocard label {
+  margin-right: 2rem;
+}
+
+.todocard--title {
+  font-weight: 700;
+}
+
+.todocard--desc {
+  width: 100%;
+  font-weight: 200;
+}
+
+.todocard .checkbox {
+  margin: 5px 0;
+}
+
+.todocard .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  border-radius: 2px;
+  width: 25px;
+  background-color: #94311b;
+}
+
+.todocard :hover input ~ .checkmark {
+  background-color: #f5a53d;
+}
+
+.todocard input:checked ~ .checkmark {
+  background-color: #2c2d34;
+}
+
+.todocard .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.todocard input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.todocard .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #efd510;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.finished-cards .finished-card {
+  background-color: rgba(44, 45, 52, 0.9);
+  color: #e94822;
+  text-decoration: line-through;
+  -webkit-text-decoration-color: #efd510;
+          text-decoration-color: #efd510;
+}
+
+.finished-cards .checkmark {
+  background-color: #000000;
+}
+
+.finished-cards :hover input ~ .checkmark {
+  background-color: #584d3e;
+}
+
+.finished-cards input:checked ~ .checkmark {
+  background-color: #584d3e;
+}
+
+@media screen and (max-width: 500px) {
+  .todo-cards .todocard:not(:last-child) {
+    margin-top: 9rem;
+  }
+  .col-md-6 {
+    padding: 0 !important;
+  }
+  .todocard {
+    width: 99%;
+    font-size: 1.6rem;
+  }
+  .todocard .checkbox {
+    margin: 1px 0;
+  }
+  .todocard .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+  .todocard label {
+    margin-right: 2rem;
+  }
+  .todocard--title {
+    font-size: 2.2rem;
+  }
+  .todocard--desc {
+    font-size: 1.8rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

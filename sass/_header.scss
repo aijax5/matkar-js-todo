@@ -1,0 +1,127 @@
+.heading {
+    position: relative;
+    left: 5%;
+    // display:block;
+
+    &--text {
+        font-size: 5rem;
+        text-transform: uppercase;
+        color: $col-dark;
+        font-weight: 700;
+    }
+
+}
+
+.addTodo {
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translatex(-50%);
+
+    h3 {
+        text-transform: uppercase;
+        align-self: flex-start;
+        margin-left: 5%;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    &>div {
+        width: 90%;
+    }
+
+    input,
+    textarea {
+        border: none;
+        background-color: #f2910a;
+        padding: 1rem 2rem;
+        width: 80%;
+        border-radius: 1rem;
+        font-size: 2rem;
+        font-weight: 400;
+        transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.25);
+        &::placeholder {
+            color: #fae7cc;
+        }
+
+        &:focus {
+            transform: scale(1.05);
+            transition: .4s all cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    }
+
+    .col-lg-3{
+        // padding: 0 !important;
+    }
+    &--title {
+        // display: none;  
+        margin-bottom: 2rem;
+
+        .btn {
+            margin-left: 5rem;
+            align-self: flex-end;
+        }
+    }
+
+    &--desc {
+        display: none;
+        textarea {
+            border-radius: 2rem;
+            width: 100%;
+        }
+        button{
+            margin-top: 8%;
+            // padding: 2rem 4rem !important; 
+        }
+        .btn-cont button:first-child{
+            margin-right: 4rem;
+        }
+    }
+}
+
+    @media screen and (max-width: 480px) {
+    
+    .col-xs-12 {
+        padding: 0 !important;
+    }
+
+    .heading {
+        left: 0%;
+    }
+
+    .addTodo {
+        margin-top: 10%;
+        h3 {
+            font-size: 2rem;
+            margin-left: 2%;
+        }
+
+        &>div {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        &--title {
+           
+        }
+        .btn {
+            margin: 0;
+            margin-top: 4rem;
+            padding: 2rem 4rem;
+            font-size: 2rem;
+            
+        }
+        &--desc{
+            
+        }
+        input,
+        textarea {
+            border-radius: 1rem;
+            width: 100%;
+            font-size: 2.6rem;
+        }
+    }
+}

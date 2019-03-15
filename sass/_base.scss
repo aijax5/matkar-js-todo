@@ -1,0 +1,21 @@
+ html {
+
+}
+
+html body {
+    font-size: 62.5%;
+    font-family: 'Quicksand', sans-serif;
+    color: $col-dark;
+}
+
+.container-fluid{
+    min-height: 95vh;
+    background-color: $color-primary;
+}
+
+@media screen and (max-width: 480px) {
+    html{
+        font-size: 38% !important;
+    }
+    
+  }

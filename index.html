@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<!-- https://colorhunt.co/palette/16467 -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <title>GID | get it done | todo app</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="css/main.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:200,300,400,500,700"
+        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700"
+        rel="stylesheet">
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="heading col-md-10 col-xs-12">
+      <div class="heading--text">
+        matkar.
+      </div>
+    </div>
+    <div class="addTodo col-lg-6 col-xs-12 ">
+      <h3 class="someH">title</h3>
+      <div class="addTodo--title flex-row">
+        <input type="text"
+               id='todoTitle'
+               placeholder="Enter the title of the list"
+               class="">
+        <button class="btn btn-round add col-xs-5 col-sm-3 col-lg-3 flex-column"
+                onclick="getDesc()">
+          next
+          <span class="glyphicon glyphicon-triangle-right"></span>
+        </button>
+      </div>
+      <div class="addTodo--desc flex-column">
+        <textarea rows="3"
+                  cols="35"
+                  id='todoDesc'
+                  placeholder="Add some description..."></textarea>
+        <div class="flex-row btn-cont">
+          <button class="btn btn-round add col-xs-5 col-sm-6 col-lg-5 flex-column"
+                  onclick="getTitle()">cancel
+            <span class="glyphicon glyphicon-remove"></span>
+          </button>
+          <button class="btn btn-round add col-xs-5 col-sm-6 col-lg-5 flex-column"
+                  onclick="addTodo()">submit
+            <span class="glyphicon glyphicon-save"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="todo-cards flex-column col-xs-12 col-sm-11 col-md-6">
+      <h2 class="todo-cards--heading">ToDos.</h2>
+     
+    </div>
+
+    <div class="todo-cards col-xs-12 col-sm-11 finished-cards flex-column col-md-6">
+      <h2 class="todo-cards--heading "> Finished tasks</h2>
+      <!-- <div class="todocard finished-card flex-column col-sm-11 ">
+
+        <div class="flex-row">
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"
+                     id='todo-1'
+                     value="todo"
+                     onclick="checkAction(this.id)">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="todocard--title">
+            this is the title for todo
+          </div>
+        </div>
+        <div class="todocard--desc">
+          this is a long description of the todo whose title is mentioned
+          above. some more words
+          needed. haha. ha.
+        </div>
+
+      </div> -->
+
+    </div>
+
+  </div>
+</body>
+
+</html>
